@@ -1,4 +1,14 @@
 <!-- Bootstrap core JavaScript-->
+ <!-- Footer -->
+ <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Your Website 2022</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+        
 <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
