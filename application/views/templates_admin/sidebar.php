@@ -11,7 +11,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fa fa-solid fa-store"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Tokomedia </div>
+                <div class="sidebar-brand-text mx-3">Admin </div>
             </a>
 
             <!-- Divider -->
@@ -19,52 +19,23 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?= base_url('admin/dashboard_admin'); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                KATEGORI
-            </div>
-
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fa fa-solid fa-guitar"></i>
-                    <span>Alat Musik</span></a>
+                <a class="nav-link" href="<?= base_url('admin/data_barang'); ?>">
+                    <i class="fas fa-fw fa-database"></i>
+                    <span>Data Barang</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                <i class="fas fa-volleyball-ball"></i>
-                    <span>Alat Olahraga</span></a>
+                <a class="nav-link" href="<?= base_url('admin/invoices'); ?>">
+                <i class="fas fa-fw fa-file-invoice"></i>
+                    <span>Invoices</span></a>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="	fas fa-pencil-alt"></i>
-                    <span>Alat Tulis</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-book"></i>
-                    <span>Buku</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                <i class="fa fa-briefcase"></i>
-                    <span>Tas</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
