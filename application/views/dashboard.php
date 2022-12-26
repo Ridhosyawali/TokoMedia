@@ -36,9 +36,9 @@
                 <br>
                 <small><?= $brg->keterangan; ?></small>
             <div class="price mt-3">
-                <b>Rp <?= $brg->harga; ?></b>
+                <b>Rp<?= number_format($brg->harga,0,',','.') ?></b>
             </div>    
-                <a href="#" class="btn btn-primary ">Tambah ke keranjang</a>
+                <?php echo anchor('dashboard/tambah_ke_keranjang/'.$brg->id_barang,'<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>
             </div>
             </div>
             
