@@ -6,7 +6,7 @@
 
         <?php foreach($barang as $brg): ?>
            <div class="row"  >
-                <div class="col-md4 mr-4"  >
+                <div class="col-md4 mr-1"  >
                     <img src="<?= base_url().'/uploads/'.$brg->gambar ?>" class="card-img-top">
                 </div>
                 <div class="col-9" >

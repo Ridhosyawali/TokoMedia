@@ -34,31 +34,31 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url('kategori/alat_musik') ?>">
                     <i class="fa fa-solid fa-guitar"></i>
                     <span>Alat Musik</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url() ?>kategori/alat_olahraga">
                 <i class="fas fa-volleyball-ball"></i>
                     <span>Alat Olahraga</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url() ?>kategori/alat_tulis">
                     <i class="	fas fa-pencil-alt"></i>
                     <span>Alat Tulis</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url() ?>kategori/buku">
                     <i class="fas fa-book"></i>
                     <span>Buku</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url() ?>kategori/tas">
                 <i class="fa fa-briefcase"></i>
                     <span>Tas</span></a>
             </li>
@@ -132,7 +132,7 @@
 
                         <div class="navbar">
                             <ul class="nav navbar-nav navbar-right">
-                                <li>
+                                <li> 
                                     <?php 
                                     $keranjang = '<i class="fa fa-shopping-cart"></i> : ' .$this->cart->total_items(). 'items'
                                     ?>

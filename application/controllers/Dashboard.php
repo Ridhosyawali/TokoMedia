@@ -23,7 +23,7 @@
         );   
         
         $this->cart->insert($data);
-        redirect('dashboard');
+        redirect($_SERVER['HTTP_REFERER']);
     }
 
     public function detail_keranjang()

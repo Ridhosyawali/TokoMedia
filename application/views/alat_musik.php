@@ -26,18 +26,17 @@
 
     <div class="row mt-4">
 
-        <?php foreach ($barang as $brg ) : ?>
+        <?php foreach ($alat_musik as $brg ) : ?>
 
             <div class="card ml-2 mb-2" style="width: 15rem;">
-                <a href="<?= base_url('dashboard/detail/'.$brg->id_barang) ?>"><img width="" src="<?= base_url().'/uploads/'.$brg->gambar; ?>"
-                 class="card-img-top"  alt=""></a>
-
+            <a href="<?= base_url('dashboard/detail/'.$brg->id_barang) ?>"><img width="" src="<?= base_url().'/uploads/'.$brg->gambar; ?>" class="card-img-top"  alt=""></a>
+            <!-- <img href="detail" src="<?= base_url().'/uploads/'.$brg->gambar; ?>" class="card-img-top" alt="..."> -->
             <div class="card-body">
-                <a style="color:#0a000a;" href="<?= base_url('dashboard/detail/'.$brg->id_barang) ?>" class="card-title"><h5><?= $brg->nama_brg; ?></h5></a>
+                <a style="color:#0a000a;" href="#Detail" class="card-title"><h5><?= $brg->nama_brg; ?></h5></a>
                 <br>
                 <small><?= $brg->keterangan; ?></small>
-            <div class="price text-capitalize mt-3">
-                Rp<?= number_format($brg->harga,0,',','.') ?>   
+            <div class="price mt-3">
+                <b>Rp<?= number_format($brg->harga,0,',','.') ?></b>
             </div>    
                 <?php echo anchor('dashboard/tambah_ke_keranjang/'.$brg->id_barang,
                 '<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>

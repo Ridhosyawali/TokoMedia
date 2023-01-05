@@ -10,15 +10,15 @@
                     
                     <div class="form-group">
                         <label for="">Nama Lengkap</label>
-                        <input type="text" name="nama" placeholder="Nama Lengkap Anda" class="form-control">
+                        <input type="text" name="nama" placeholder="Nama Lengkap Anda" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Alamat</label>
-                        <input type="text" name="alamat" placeholder="Alamat Lengkap Anda"class="form-control">
+                        <input type="text" name="alamat" placeholder="Alamat Lengkap Anda"class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">No. telepon</label>
-                        <input type="number" name="no_telp" placeholder="Nomor Telepon Anda"class="form-control">
+                        <input type="number" name="no_telp" placeholder="Nomor Telepon Anda"class="form-control" required>
                     </div>
 
                     <div class="form-group">

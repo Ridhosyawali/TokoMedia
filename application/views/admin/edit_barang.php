@@ -20,8 +20,15 @@
                 <input type="text" class="form-control" name="keterangan" id="" value="<?= $brg->keterangan ?>" >
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Kategori</label>
-                <input type="text" class="form-control" name="kategori" id="" value="<?= $brg->kategori ?>" >
+                <label for="" class="form-label">Kategori</label> 
+                <select class="form-control" name="kategori">
+                  <option value=""><?= $brg->kategori ?></option>
+                  <option value="Alat_musik">Alat Musik</option>
+                  <option value="Alat_olahraga">Alat olahraga</option>
+                  <option value="Alat_tulis">Alat tulis</option>
+                  <option value="Buku">Buku</option>
+                  <option value="Tas">Tas</option>
+                </select>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Harga</label>
@@ -31,7 +38,8 @@
                 <label for="" class="form-label">Stok</label>
                 <input type="text" class="form-control" name="stok" id="" value="<?= $brg->stok ?>" >
             </div>
-            <button type="submit" class="btn btn-sm btn-primary">Simpan</button>
+            <button type="submit" class="btn btn-sm btn-primary mb-5">Simpan</button>
+            <?php echo anchor('admin/data_barang/','<div class="btn btn-sm btn-danger mb-5">Kembali</div>') ?>
         </form>
     <?php endforeach; ?>
 </div>

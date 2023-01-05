@@ -49,27 +49,34 @@
             
             <div class="form-group">
                 <label for="">Nama Barang</label>
-                <input type="text" name="nama_brg" class="form-control">
+                <input type="text" name="nama_brg" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">Keterangan</label>
-                <input type="text" name="keterangan" class="form-control">
+                <input type="text" name="keterangan" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">Kategori</label>
-                <input type="text" name="kategori" class="form-control">
+                <select class="form-control" name="kategori" required>
+                  <option value="">--Pilih Kategori--</option>
+                  <option value="Alat_musik">Alat Musik</option>
+                  <option value="Alat_olahraga">Alat olahraga</option>
+                  <option value="Alat_tulis">Alat tulis</option>
+                  <option value="Buku">Buku</option>
+                  <option value="Tas">Tas</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="">Harga</label>
-                <input type="text" name="harga" class="form-control">
+                <input type="text" name="harga" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">Stok</label>
-                <input type="text" name="stok" class="form-control">
+                <input type="text" name="stok" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">Gambar Produk</label>
-                <input type="file" name="gambar" class="form-control">
+                <input type="file" name="gambar" class="form-control" required>
             </div>
 
       </div>
