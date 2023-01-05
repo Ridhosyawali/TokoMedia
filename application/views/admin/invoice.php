@@ -19,7 +19,7 @@
                 <td><?= $inv->alamat ?></td>
                 <td><?= $inv->tgl_pesan ?></td>
                 <td><?= $inv->batas_bayar ?></td>
-                <td><a class="btn btn-sm btn-primary">Detail</a></td>  
+                <td><?= anchor('admin/invoice/detail/'.$inv->id,'<div class="btn btn-sm btn-primary">Detail</div>') ?></td>  
                 <td><a href="<?php echo base_url('admin/invoice/delete/'.$inv->id); ?>" class="btn btn-sm btn-danger">Hapus</a></td>
             </tr>
             <?php endforeach ; ?>

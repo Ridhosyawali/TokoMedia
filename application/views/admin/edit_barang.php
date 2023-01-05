@@ -3,8 +3,12 @@
 
     <?php   foreach($barang as $brg) : ?>
     
-        <form method="post" action="<?php echo base_url(). 'admin/data_barang/update' ?>" >
+        <form method="post" action="<?php echo base_url(). 'admin/data_barang/update' ?>" enctype="multipart/form-data">
 
+             <div class="mb-3">
+                <img src="<?= base_url().'/uploads/'.$brg->gambar ?>" class="card-img-top" style="width: 15rem;">
+                <input type="file" name="gambar" class="form-control" placeholder="Update Foto" required>
+            </div>
             
             <div class="mb-3">
                 <label for="" class="form-label">Nama Barang</label>

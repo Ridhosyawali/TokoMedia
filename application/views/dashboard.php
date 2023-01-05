@@ -29,7 +29,7 @@
         <?php foreach ($barang as $brg ) : ?>
 
             <div class="card ml-2 mb-2" style="width: 15rem;">
-            <a href="#Detail"><img width="" src="<?= base_url().'/uploads/'.$brg->gambar; ?>" class="card-img-top"  alt=""></a>
+            <a href="<?= base_url('dashboard/detail/'.$brg->id_barang) ?>"><img width="" src="<?= base_url().'/uploads/'.$brg->gambar; ?>" class="card-img-top"  alt=""></a>
             <!-- <img href="detail" src="<?= base_url().'/uploads/'.$brg->gambar; ?>" class="card-img-top" alt="..."> -->
             <div class="card-body">
                 <a style="color:#0a000a;" href="#Detail" class="card-title"><h5><?= $brg->nama_brg; ?></h5></a>
@@ -38,7 +38,8 @@
             <div class="price mt-3">
                 <b>Rp<?= number_format($brg->harga,0,',','.') ?></b>
             </div>    
-                <?php echo anchor('dashboard/tambah_ke_keranjang/'.$brg->id_barang,'<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>
+                <?php echo anchor('dashboard/tambah_ke_keranjang/'.$brg->id_barang,
+                '<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>
             </div>
             </div>
             

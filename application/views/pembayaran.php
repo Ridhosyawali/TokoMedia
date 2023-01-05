@@ -2,20 +2,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <div class="btn btn-sm btn-success">
-                <?php  
-                    $grand_total=0;
-                    if($keranjang = $this->cart->contents())
-                    {
-                        foreach($keranjang as $item)
-                        {
-                            $grand_total = $grand_total + $item['subtotal'];
-                        }
-
-                        echo "Total Belanja Anda: Rp.".number_format($grand_total,0,',','.');
-                    
-                ?>
-            </div><br><br>
+            
 
             <h4>Form Pembayaran</h4>
 
@@ -56,7 +43,24 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-sm btn-primary mb-3">checkout</button>
+                    <div class="text-monospace text-dark">
+                        <h5>
+                   <?php  
+                    $grand_total=0;
+                    if($keranjang = $this->cart->contents())
+                    {
+                        foreach($keranjang as $item)
+                        {
+                            $grand_total = $grand_total + $item['subtotal'];
+                        }
+
+                        echo "Total Belanja Anda: Rp.".number_format($grand_total,0,',','.');
+                    
+                ?></h5>
+            </div><br>
+
+                    <button type="submit" class="btn btn-primary mb-3">Checkout</button>
+
 
             </form>
 

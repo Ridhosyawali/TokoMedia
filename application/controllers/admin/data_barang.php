@@ -27,7 +27,7 @@ class Data_barang extends CI_Controller{
                 echo "Gambar gagal di Upload";
             }else{
                 $gambar = $this->upload->data('file_name');
-            }
+            }  
         }
 
         $data = array(
@@ -61,6 +61,21 @@ class Data_barang extends CI_Controller{
         $kategori         = $this->input->post('kategori');
         $harga         = $this->input->post('harga');
         $stok         = $this->input->post('stok');
+        //memasukkan gambar
+        $gambar = $_FILES['gambar']['name'];
+				if($gambar){
+					$config['upload_path'] = './uploads';
+					$config['allowed_types'] = 'jpeg|jpg|png';
+					
+					$this->load->library('upload', $config);
+
+					if($this->upload->do_upload('gambar')){
+						$gambar = $this->upload->data('file_name');
+						$this->db->set('gambar', $gambar);
+					}else{
+						echo "Foto Gagal Diupdate!";
+					}	
+				}
 
         $data = array(
             'nama_brg'      => $nama_brg,
@@ -68,7 +83,16 @@ class Data_barang extends CI_Controller{
             'kategori'      => $kategori,
             'harga'         => $harga,
             'stok'          => $stok,
+            'gambar'        => $gambar
         );
+
+        //timpa data
+        $item = $this->db->get_where('tb_barang', $id)->row();
+
+		if($item->gambar != NULL){
+			$target_file = './uploads/'.$item->gambar;
+			unlink($target_file);
+		}	
 
         $where = array(
             'id_barang'     => $id
@@ -83,4 +107,51 @@ class Data_barang extends CI_Controller{
         $this->model_barang->hapus_data($where,'tb_barang');
         redirect('admin/data_barang/index');
     }
+    public function detail($id_barang)
+    {
+        $data['barang'] = $this->model_barang->detail_brg($id_barang);
+        $this->load->view('templates_admin/header');
+        $this->load->view('templates_admin/sidebar');
+        $this->load->view('admin/detail_databarang',$data);
+        $this->load->view('templates_admin/footer');   
+    }
+
+    public function updategambar($id_barang)
+	{
+		$id = ['id_barang' => $id_barang];
+
+		$gambar = $_FILES['gambar']['name'];
+				if($gambar){
+					$config['upload_path'] = './uploads';
+					$config['allowed_types'] = 'jpeg|jpg|png';
+					
+					$this->load->library('upload', $config);
+
+					if($this->upload->do_upload('gambar')){
+						$gambar = $this->upload->data('file_name');
+						$this->db->set('gambar', $gambar);
+					}else{
+						echo "Foto Gagal Diupdate!";
+					}	
+				}	
+
+		$data = array(
+				'gambar' => $gambar,
+				'update_at' => date('Y-m-d')
+		);		
+
+		//timpa data
+		$item = $this->db->get_where('tb_barang', $id)->row();
+
+		if($item->gambar != NULL){
+			$target_file = './uploads/'.$item->gambar;
+			unlink($target_file);
+		}	
+
+		$this->db->update('tb_barang', $data, $id);
+		redirect('admin/data_barang/index');
+
+
+	}
+
 }

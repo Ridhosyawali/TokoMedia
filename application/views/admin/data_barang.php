@@ -22,7 +22,8 @@
             <td><?= $brg->kategori ?></td>
             <td><?= $brg->harga ?></td>
             <td><?= $brg->stok ?></td>
-            <td><div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div></td>
+            <td><?= anchor('admin/data_barang/detail/'.$brg->id_barang,
+            '<div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>') ?></td>
             <td><?= anchor('admin/data_barang/edit/'.$brg->id_barang, 
             '<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>'); ?></td>
             <td><?= anchor('admin/data_barang/hapus/' .$brg->id_barang,
