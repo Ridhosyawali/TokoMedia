@@ -60,6 +60,8 @@
             </div><br>
 
                     <button type="submit" class="btn btn-primary mb-3">Checkout</button>
+            <?php echo anchor('dashboard/detail_keranjang','<div class="btn btn-danger mb-3">Kembali</div>') ?>
+
 
 
             </form>
